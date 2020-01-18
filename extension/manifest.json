@@ -2,7 +2,7 @@
   "name": "credible-or-not",
   "version": "1.0",
   "description": "An extension to ascertain whether a news article is credible or not",
-  "permissions": ["storage"],
+  "permissions": ["declarativeContent", "storage"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -10,8 +10,11 @@
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "img/news.svg"
+      "64": "./img/news.png"
     }
+  },
+  "icons": {
+    "64": "./img/news.png"
   },
   "manifest_version": 2
 }
