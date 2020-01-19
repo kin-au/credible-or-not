@@ -1,12 +1,10 @@
-const updateContent = event => {
-  event.preventDefault();
+const updateContent = () => {
+  const glitchedContent = document.getElementById("iframe-content");
 
-  const url = document.getElementById('input-url').value;
-  const glitchedContent = document.getElementById('iframe-content');
-
-  const glitchedUrl = 'https://glitched.news/article?url=' + url;
-  glitchedContent.setAttribute('src', glitchedUrl);
+  const glitchedUrl =
+    "https://glitched.news/article?url=" + window.location.href;
+  glitchedContent.setAttribute("src", glitchedUrl);
 };
-
-const button = document.getElementById('button-get-info');
-button.addEventListener('click', updateContent);
+updateContent();
+// const button = document.getElementById('button-get-info');
+// button.addEventListener('click', updateContent);
